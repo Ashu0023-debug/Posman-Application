@@ -1,0 +1,30 @@
+{
+  "name": "postman-clone",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.2",
+    "mysql2": "^3.15.3",
+    "react-router-dom": "^7.9.4",
+    "react-syntax-highlighter": "^15.6.6",
+    "sequelize": "^6.34.0",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.15"
+  }
+}

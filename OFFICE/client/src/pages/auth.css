@@ -1,0 +1,629 @@
+/* General body for login/register */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0e0e0e;
+  color: #ddd;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #ff6f61;
+  font-size: 28px;
+}
+
+.auth-container input {
+  width: 300px;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #2b2b2b;
+  color: #ddd;
+  font-size: 16px;
+}
+
+.auth-container input:focus {
+  outline: 2px solid #ff6f61;
+}
+
+/* 🔸 Unified Button Style for Sign In / Sign Up */
+.auth-container button,
+.btn-login,
+.btn-signup {
+  width: 320px;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ff6f61, #ff9068);
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+}
+
+.auth-container button:hover,
+.btn-login:hover,
+.btn-signup:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff856f, #ffa97c);
+  box-shadow: 0 6px 16px rgba(255, 111, 97, 0.4);
+}
+
+.auth-container p {
+  margin-top: 12px;
+  color: #aaa;
+}
+
+.auth-container .link {
+  color: #ff6f61;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-container .link:hover {
+  color: #ffa97c;
+}
+/* 🌑 Base Layout */
+.home-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1e1e1e, #0d0d0d 70%);
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🌟 Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Left side (logo + text) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postman-logo {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255, 111, 97, 0.6));
+}
+
+.postman-logo:hover {
+  transform: scale(1.15);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ff6f61;
+  text-shadow: 0 0 8px rgba(255, 111, 97, 0.6);
+}
+
+/* 🔸 Nav Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff6f61, #ff9068);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 111, 97, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 111, 97, 0.6);
+}
+
+/* 🚀 Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Left: Text */
+.hero-content {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #ffffff 0%, #ff9068 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  color: #ff6f61;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 550px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.btn-cta {
+  padding: 14px 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff6f61, #ff9068);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 111, 97, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 111, 97, 0.6);
+}
+
+/* Right: Image */
+.hero-image {
+  flex: 1;
+  text-align: center;
+  animation: fadeInUp 1.4s ease;
+}
+
+.hero-image img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(255, 111, 97, 0.25);
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-container {
+  background-color: #0e0e0e;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #151515;
+  box-shadow: 0 2px 10px rgba(255, 111, 97, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postman-logo {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.postman-logo:hover {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6f61;
+}
+
+/* Navbar buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn-primary {
+  background-color: #ff6f61;
+  color: #fff;
+}
+
+.nav-btn-primary:hover {
+  background-color: #ff8b7b;
+  transform: translateY(-2px);
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  color: #ff6f61;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.btn-primary {
+  padding: 14px 28px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-primary:hover {
+  background-color: #ff8b7b;
+  transform: scale(1.05);
+}
+
+/* Hero image */
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(255, 111, 97, 0.25),
+    0 0 25px rgba(255, 144, 104, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(255, 111, 97, 0.35),
+    0 0 30px rgba(255, 144, 104, 0.4);
+}
+
+/* Optional overlay for glow effect */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 111, 97, 0.1),
+    transparent 70%
+  );
+  border-radius: 18px;
+  pointer-events: none;
+}
+/* Background gradient for page */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fff1f0, #ffe3e0);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Login card */
+.auth-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 30px rgba(255, 111, 97, 0.25);
+  width: 380px;
+  max-width: 90%;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.auth-box h2 {
+  color: #ff6f61;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Input fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ffb5ab;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
+}
+
+/* Login button */
+.auth-btn {
+  width: 100%;
+  background: #ff6f61;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: #ff897c;
+  transform: translateY(-2px);
+}
+
+.auth-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Switch text */
+.switch-text {
+  margin-top: 20px;
+  color: #444;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #ff6f61;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Background gradient for page */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fff1f0, #ffe3e0);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Login/Register card */
+.auth-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 30px rgba(255, 111, 97, 0.25);
+  width: 380px;
+  max-width: 90%;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.auth-box h2 {
+  color: #ff6f61;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Input fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ffb5ab;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  background: #ff6f61;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: #ff897c;
+  transform: translateY(-2px);
+}
+
+.auth-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Switch text */
+.switch-text {
+  margin-top: 20px;
+  color: #444;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #ff6f61;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
